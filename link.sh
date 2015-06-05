@@ -1,5 +1,9 @@
 #! /bin/sh
 
+# ---- vim ----
+ln -sf ~/.dotfiles/vim ~/.vim
+ln -sf ~/.dotfiles/vim/vimrc ~/.vimrc
+
 # ---- zprezto ----
 ln -sf ~/.dotfiles/zprezto ~/.zprezto
 ln -sf ~/.dotfiles/zprezto/runcoms/zlogin ~/.zlogin
