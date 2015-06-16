@@ -11,5 +11,70 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+# This loads nvm
 export NVM_DIR="/home/arle/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+
+# .profile を読み込んでおく (grails, gvm, sublime, mathematica 等)
+source ~/.profile
+
+# 標準エディターを vim にする
+export EDITOR='vim'
+export VISUAL='vim'
+
+# grep のハイライトを変更する(黒, マゼンダ)
+export GREP_COLOR='30;45'
+# ディレクトリ補完の色を変更する
+zstyle ':completion:*:default' list-colors "${(s.:.)LS_COLORS}:st=30;44"
+# ls の色をデフォルトに戻す
+# export LSCOLORS=exfxcxdxbxegedabagacad
+
+# エイリアス
+alias history='history -i'
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+alias mkdir='mkdir -p'
+# alias cd='cdls'
+# function cd(){
+#     builtin cd $@ && ls;
+# }
+
+
+# 補完の時にベルを鳴らさない
+setopt NO_LIST_BEEP
+
+# 大文字、小文字を区別せず補完する
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' 'r:|[._-]=**' 'r:|=*' 'l:|=*' '+m:{A-Z}={a-z}'
+# インタラクティブモードにする
+zstyle ':completion:*:*:*:*:*' menu select interactive
+# KillAll の補完
+zstyle ':completion:*:*:*:*:processes-names' command 'ps -u $LOGNAME -o command -w'
+zstyle ':completion:*:*:killall:*' menu yes select
+zstyle ':completion:*:*:killall:*' force-list always
+zstyle ':completion:*:*:killall:*' insert-ids single
+# 履歴補完の色を変更
+zstyle -s ':prezto:module:history-substring-search:color' found \
+  'HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND' \
+    || HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND='bg=magenta,fg=black,bold'
+
+zstyle -s ':prezto:module:history-substring-search:color' not-found \
+  'HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND' \
+    || HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND='bg=red,fg=black,bold'
+
+# 最初のタブキー押下で cd を補完
+first-tab() {
+  if [[ $#BUFFER == 0 ]]; then
+    BUFFER="cdls "
+    CURSOR=5
+    zle list-choices
+    # zle menu-complete
+  else
+    # 展開する前に補完候補を出させる
+    # zle menu-complete
+
+    zle expand-or-complete
+  fi
+}
+zle -N first-tab
+bindkey '^I' first-tab
