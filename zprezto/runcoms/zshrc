@@ -2,7 +2,7 @@
 # Executes commands at the start of an interactive session.
 #
 # Authors:
-#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#   ArLE <ARLEQUIN.prx@gmail.com>
 #
 
 # Source Prezto.
@@ -19,8 +19,8 @@ export NVM_DIR="/home/arle/.nvm"
 source ~/.profile
 
 # 標準エディターを vim にする
-export EDITOR='vim'
-export VISUAL='vim'
+# export EDITOR='vim'
+# export VISUAL='vim'
 
 # grep のハイライトを変更する(黒, マゼンダ)
 export GREP_COLOR='30;45'
