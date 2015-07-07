@@ -78,3 +78,9 @@ first-tab() {
 }
 zle -N first-tab
 bindkey '^I' first-tab
+
+# 追加の補完関数
+fpath=(~/.zsh/completion $fpath)
+
+autoload -U compinit
+compinit -u
