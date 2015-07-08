@@ -45,6 +45,29 @@ hi CursorLineNr term=bold   cterm=NONE ctermfg=228 ctermbg=NONE
 " マウス操作on
 set mouse=a
 
+" 色を変更
+highlight Search ctermfg=0
+highlight Visual ctermbg=8
+highlight Folded ctermfg=27
+highlight FoldColumn ctermfg=27
+highlight DiffAdd ctermfg=0
+highlight DiffChange ctermfg=0
+highlight DiffDelete ctermfg=33
+highlight DiffText ctermfg=0
+highlight SignColumn ctermfg=27
+highlight SpellBad ctermfg=0
+highlight SpellCap ctermfg=0
+highlight SpellRare ctermfg=0
+highlight SpellLocal ctermfg=0
+highlight Pmenu ctermfg=0
+highlight PmenuSel ctermfg=0
+highlight PmenuSbar ctermfg=0
+highlight CursorColumn ctermfg=0
+highlight ColorColumn ctermfg=0
+highlight MatchParen ctermfg=0
+highlight Ignore ctermfg=8
+highlight Error ctermfg=8
+
 " --------------------------------
 " ------ NeoBundle  setting ------
 " --------------------------------
