@@ -12,4 +12,4 @@ ln -sf ~/.dotfiles/zsh/zpreztorc ~/.zpreztorc
 ln -sf ~/.dotfiles/zsh/zprofile ~/.zprofile
 ln -sf ~/.dotfiles/zsh/zprezto/runcoms/zshenv ~/.zshenv
 ln -sf ~/.dotfiles/zsh/zshrc ~/.zshrc
-
+ln -sf ~/.dotfiles/zsh ~/.zsh
