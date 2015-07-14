@@ -59,7 +59,7 @@ get_os_info() {
   get_os_bit
   get_os_distribution
 }
-if package_name == "unknown"; then
+if [ $package_name = "unknown" ]; then
   return
 fi
 
@@ -75,14 +75,18 @@ git config --global user.name ${git_name}
 git config --global user.email ${git_email}
 git config --global alias.tr "log --graph --pretty='format:%C(yellow)%h%Creset %s %Cgreen(%an)%Creset %Cred%d%Creset'"
 cd ~/.dotfiles
-git submodule https://github.com/Shougo/neobundle.vim.git vim/bundle/neobundle.vim
-git submodule https://github.com/sorin-ionescu/prezto.git zsh/zprezto
+git submodule add git://github.com/Shougo/neobundle.vim.git vim/bundle/neobundle.vim
+git submodule add git://github.com/sorin-ionescu/prezto.git zsh/zprezto
 git submodule update --init --recursive
 mkdir ~/TEMP
 cd ~/TEMP
-git clone https://github.com/github/hub.git
-cd hub
-./script/build
+if [ $os_bit = "x86_64" ] || [ $os_bit = "amd64" ]; then
+  wget https://github.com/github/hub/releases/download/v2.2.1/hub-linux-amd64-2.2.1.tar.gz -O hub-linux-2.2.1.tar.gz
+else
+  wget https://github.com/github/hub/releases/download/v2.2.1/hub-linux-386-2.2.1.tar.gz -O hub-linux-2.2.1.tar.gz
+fi
+tar -zxfv hub-linux-2.2.1.tar.gz
+cd hub-linux-2.2.1
 cp hub /usr/local/bin
 cp man/hub.* /usr/local/man/
 cp etc/hub.* /usr/local/etc/
@@ -93,4 +97,4 @@ git checkout `git describe --abbrev=0 --tags`
 . ~/.nvm/nvm.sh
 nvm install stable
 nvm alias default stable
-
+rm -rf ~/TEMP
