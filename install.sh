@@ -59,7 +59,7 @@ get_os_info() {
   get_os_bit
   get_os_distribution
 }
-if package_name=="unknown"; then
+if package_name == "unknown"; then
   return
 fi
 
