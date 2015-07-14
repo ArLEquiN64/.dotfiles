@@ -66,6 +66,7 @@ fi
 get_os_info
 ${package_manager} -v
 sudo ${package_manager} install vim zsh git
+sudo chsh -s /bin/zsh
 echo "Enter your git name..."
 read git_name
 echo "Enter your git email..."
