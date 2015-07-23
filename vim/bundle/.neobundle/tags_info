@@ -1,5 +1,7 @@
 neobundle.vim
 neomru.vim
+syntastic
 unite.vim
+vim-coffee-script
 vim-easy-align
 vimproc.vim
