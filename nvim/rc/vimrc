@@ -1,0 +1,92 @@
+" --------------------------------
+" ----------- 基本設定 -----------
+" --------------------------------
+" ステータスラインを常に表示
+set laststatus=2
+" 行番号を表示
+set number
+" 右下に表示される行・列の番号を表示する(?)
+set ruler
+" 不可視文字の表示
+set list
+set listchars=tab:▸…,trail:…,nbsp:%,extends:»,precedes:«,eol:↲
+" インクリメンタルサーチ
+set incsearch
+" 検索結果をハイライト表示
+set hlsearch
+" 大文字小文字区別せずに検索
+set ignorecase
+" 大文字と小文字が混在した言葉で検索を行った場合に限り、大文字と小文字を区別
+set smartcase
+" 行頭、行末折り返し
+set whichwrap=b,s,h,l,<,>,[,]
+" カーソル上下の行数を確保
+set scrolloff=4
+" 変更中のファイルでも、保存しないで他のファイルを表示
+set hidden
+" コマンド、検索パターンの履歴数
+set history=2048
+" tabは空白を使う
+set expandtab
+" tabの文字数
+set tabstop=2
+" 行頭で<tab>でインデント
+set smarttab
+" <tab>で使う文字数
+set shiftwidth=2
+" 自動インデント
+set autoindent
+" 自動再読み込み
+set autoread
+" カーソル行強調
+set cursorline
+hi Cursorline cterm=NONE ctermbg=darkgray
+hi CursorLineNr term=bold   cterm=NONE ctermfg=228 ctermbg=NONE
+" マウス操作on
+set mouse=a
+
+" 色を変更
+highlight Search ctermfg=0
+highlight Visual ctermbg=8
+highlight Folded ctermfg=27
+highlight FoldColumn ctermfg=27
+highlight DiffAdd ctermfg=0
+highlight DiffChange ctermfg=0
+highlight DiffDelete ctermfg=33
+highlight DiffText ctermfg=0
+highlight SignColumn ctermfg=27
+highlight SpellBad ctermfg=0
+highlight SpellCap ctermfg=0
+highlight SpellRare ctermfg=0
+highlight SpellLocal ctermfg=0
+highlight Pmenu ctermfg=0
+highlight PmenuSel ctermfg=0
+highlight PmenuSbar ctermfg=0
+highlight CursorColumn ctermfg=0
+highlight ColorColumn ctermfg=0
+highlight MatchParen ctermfg=0
+highlight Ignore ctermfg=8
+highlight Error ctermfg=8
+
+colorscheme smyck
+
+
+" --------------------------------
+" ----------- dein.vim -----------
+" --------------------------------
+if &compatible
+  set nocompatible
+endif
+set runtimepath+=$XDG_CONFIG_HOME/nvim/dein/repos/github.com/Shougo/dein.vim
+
+call dein#begin('$XDG_CONFIG_HOME/nvim/dein')
+
+call dein#add('Shougo/dein.vim')
+call dein#add('Shougo/neocomplete.vim')
+
+
+call dein#end()
+
+filetype plugin indent on
+syntax enable
+
