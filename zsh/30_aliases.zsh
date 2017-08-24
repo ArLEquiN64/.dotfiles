@@ -31,3 +31,6 @@ alias mkdir='mkdir -p'
 # function cd(){
 #     builtin cd $@ && ls;
 # }
+
+
+eval "$(hub alias -s)"
