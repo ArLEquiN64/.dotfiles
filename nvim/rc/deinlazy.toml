@@ -179,6 +179,7 @@ hook_source = '''
 
 [[plugins]]
 repo = 'equalsraf/neovim-gui-shim'
+
 [[plugins]]
 repo = 'Shougo/junkfile.vim'
 on_source = 'denite.vim'

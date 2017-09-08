@@ -95,8 +95,8 @@ rtp = 'vim'
 [[plugins]]
 repo = 'vim-jp/vimdoc-ja'
 
-[[plugins]]
-repo = 'kballard/vim-fish'
+# [[plugins]]
+# repo = 'kballard/vim-fish'
 
 [[plugins]]
 repo = 'Shougo/neossh.vim'
@@ -130,3 +130,9 @@ repo = 'Shirk/vim-gas'
 
 [[plugins]]
 repo = 'chrisbra/vim-zsh'
+
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+
+[[plugins]]
+repo = 'jistr/vim-nerdtree-tabs'
