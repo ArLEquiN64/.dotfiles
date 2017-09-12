@@ -93,7 +93,7 @@ zplug "motemen/ghq", \
 # zplug "b4b4r07/open-link.sh", as:command, use:'(*).bash', rename-to:'$1'
 # zplug "b4b4r07/zsh-gomi", as:command, use:bin/gomi
 # zplug "b4b4r07/ssh-keyreg", as:command, use:bin
-# zplug "mrowa44/emojify", as:command
+zplug "mrowa44/emojify", as:command
 # zplug 'b4b4r07/copy', as:command, use:'(*).sh', rename-to:'$1'
 
 # zplug "b4b4r07/ultimate", as:theme
@@ -102,15 +102,15 @@ zplug "motemen/ghq", \
 # fi
 # source /Users/b4b4r07/src/github.com/b4b4r07/ultimate/ultimate.zsh-theme
 
-zplug "modules/terminal", from:prezto
+# zplug "modules/terminal", from:prezto
 zplug "modules/editor", from:prezto
-zplug "modules/history", from:prezto
-zplug "modules/directory", from:prezto
-zplug "modules/spectrum", from:prezto
-zplug "modules/utility", from:prezto
-zplug "modules/completion", from:prezto
+# zplug "modules/history", from:preztoc
+# zplug "modules/directory", from:prezto
+# zplug "modules/spectrum", from:prezto
+# zplug "modules/utility", from:prezto
+# zplug "modules/completion", from:prezto
 zplug "modules/git", from:prezto
-zplug "modules/osx", from:prezto, if:"[[ $OSTYPE == *darwin* ]]"
+# zplug "modules/osx", from:prezto, if:"[[ $OSTYPE == *darwin* ]]"
 zplug "modules/prompt", from:prezto
 zstyle ':prezto:module:prompt' theme 'sorin'
 
@@ -159,15 +159,15 @@ zplug 'b4b4r07/tmux-powertools', \
 #     rename-to:'$1'
 
 #zplug 'b4b4r07/zsh-history', defer:3, use:init.zsh
-# zplug 'b4b4r07/zsh-history', as:command, use:misc/fzf-wrapper.zsh, rename-to:ff
-# if zplug check 'b4b4r07/zsh-history'; then
-#     export ZSH_HISTORY_FILE="$HOME/.zsh_history.db"
-#     ZSH_HISTORY_KEYBIND_GET_BY_DIR="^r"
-#     ZSH_HISTORY_KEYBIND_GET_ALL="^r^a"
-#     ZSH_HISTORY_KEYBIND_SCREEN="^r^r"
-#     ZSH_HISTORY_KEYBIND_ARROW_UP="^p"
-#     ZSH_HISTORY_KEYBIND_ARROW_DOWN="^n"
-# fi
+zplug 'b4b4r07/zsh-history', as:command, use:misc/fzf-wrapper.zsh, rename-to:ff
+if zplug check 'b4b4r07/zsh-history'; then
+    export ZSH_HISTORY_FILE="$HOME/.zsh_history.db"
+    ZSH_HISTORY_KEYBIND_GET_BY_DIR="^r"
+    ZSH_HISTORY_KEYBIND_GET_ALL="^r^a"
+    ZSH_HISTORY_KEYBIND_SCREEN="^r^r"
+    ZSH_HISTORY_KEYBIND_ARROW_UP="^p"
+    ZSH_HISTORY_KEYBIND_ARROW_DOWN="^n"
+fi
 
 # zplug 'b4b4r07/git-fzf', hook-build:'make'
 # zplug 'b4b4r07/git-fzf', \
