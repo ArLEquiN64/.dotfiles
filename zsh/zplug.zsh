@@ -100,7 +100,7 @@ zplug "mrowa44/emojify", as:command
 # if zplug check "b4b4r07/ultimate"; then
 #     zstyle ':ultimate:prompt:path' mode 'shortpath'
 # fi
-# source /Users/b4b4r07/src/github.com/b4b4r07/ultimate/ultimate.zsh-theme
+# source $GOPATH/src/github.com/b4b4r07/ultimate/ultimate.zsh-theme
 
 # zplug "modules/terminal", from:prezto
 zplug "modules/editor", from:prezto
@@ -159,15 +159,15 @@ zplug 'b4b4r07/tmux-powertools', \
 #     rename-to:'$1'
 
 #zplug 'b4b4r07/zsh-history', defer:3, use:init.zsh
-zplug 'b4b4r07/zsh-history', as:command, use:misc/fzf-wrapper.zsh, rename-to:ff
-if zplug check 'b4b4r07/zsh-history'; then
-    export ZSH_HISTORY_FILE="$HOME/.zsh_history.db"
-    ZSH_HISTORY_KEYBIND_GET_BY_DIR="^r"
-    ZSH_HISTORY_KEYBIND_GET_ALL="^r^a"
-    ZSH_HISTORY_KEYBIND_SCREEN="^r^r"
-    ZSH_HISTORY_KEYBIND_ARROW_UP="^p"
-    ZSH_HISTORY_KEYBIND_ARROW_DOWN="^n"
-fi
+#zplug 'b4b4r07/zsh-history', as:command, use:misc/fzf-wrapper.zsh, rename-to:ff
+#if zplug check 'b4b4r07/zsh-history'; then
+#    export ZSH_HISTORY_FILE="$HOME/.zsh_history.db"
+#    ZSH_HISTORY_KEYBIND_GET_BY_DIR="^r"
+#    ZSH_HISTORY_KEYBIND_GET_ALL="^r^a"
+#    ZSH_HISTORY_KEYBIND_SCREEN="^r^r"
+#    ZSH_HISTORY_KEYBIND_ARROW_UP="^p"
+#    ZSH_HISTORY_KEYBIND_ARROW_DOWN="^n"
+#fi
 
 # zplug 'b4b4r07/git-fzf', hook-build:'make'
 # zplug 'b4b4r07/git-fzf', \
@@ -182,8 +182,18 @@ fi
 
 # zplug 'b4b4r07/history', use:misc/zsh/init.zsh
 # if zplug check 'b4b4r07/history'; then
-#     export ZSH_HISTORY_AUTO_SYNC=false
+#     export ZSH_HISTORY_KEYBIND_GET_BY_DIR="^r"
+#     ZSH_HISTORY_KEYBIND_GET_ALL="^r^a"
+#     ZSH_HISTORY_KEYBIND_ARROW_UP="^p"
+#     ZSH_HISTORY_KEYBIND_ARROW_DOWN="^n"
+#     ZSH_HISTORY_AUTO_SYNC=false
+#     ZSH_HISTORY_AUTO_SYNC_INTERVAL="1h"
 # fi
 
-# source "/Users/b4b4r07/src/github.com/b4b4r07/history/misc/zsh/init.zsh"
+# source "$GOPATH/src/github.com/b4b4r07/history/misc/zsh/init.zsh"
+# export ZSH_HISTORY_KEYBIND_GET_BY_DIR="^r"
+# export ZSH_HISTORY_KEYBIND_GET_ALL="^r^a"
+# export ZSH_HISTORY_KEYBIND_ARROW_UP="^p"
+# export ZSH_HISTORY_KEYBIND_ARROW_DOWN="^n"
 # export ZSH_HISTORY_AUTO_SYNC=false
+# export ZSH_HISTORY_AUTO_SYNC_INTERVAL="1h"
