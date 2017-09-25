@@ -117,8 +117,8 @@ zstyle ':prezto:module:prompt' theme 'sorin'
 # zplug mafredri/zsh-async, from:github
 # zplug sindresorhus/pure, use:pure.zsh, from:github, as:theme
 
-zplug 'b4b4r07/tmux-powertools', \
-    hook-load:'tmux-loader'
+# zplug 'b4b4r07/tmux-powertools', \
+#     hook-load:'tmux-loader'
 
 #zplug 'b4b4r07/git-powertools', \
 #    as:command, \

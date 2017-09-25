@@ -135,4 +135,14 @@ repo = 'chrisbra/vim-zsh'
 repo = 'scrooloose/nerdtree'
 
 [[plugins]]
+repo = 'Xuyuanp/nerdtree-git-plugin'
+depends = 'nerdtree'
+
+[[plugins]]
 repo = 'jistr/vim-nerdtree-tabs'
+depends = 'nerdtree'
+hook_add = '''
+  map <C-n> <plug>NERDTreeTabsToggle<CR>
+  let g:nerdtree_tabs_open_on_console_startup = 1
+'''
+

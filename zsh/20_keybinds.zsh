@@ -131,7 +131,7 @@ zle -N _peco-select-history
 bindkey '^r' _peco-select-history
 
 _start-tmux-if-it-is-not-already-started() {
-    BUFFER="${${${(M)${+commands[tmuxx]}#1}:+tmuxx}:-tmux}"
+    BUFFER="${${${(M)${+commands[tmuxx]}#1}:+tmuxx}:-tmux -f $XDG_CONFIG_HOME/tmux/tmux.conf}"
     if has "tmux_automatically_attach"; then
         BUFFER="tmux_automatically_attach"
     fi
