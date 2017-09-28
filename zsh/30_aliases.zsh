@@ -25,7 +25,7 @@ elif (( $+commands[ls] )); then
 fi
 
 # Common aliases
-alias ..='cd ..'
+alias ..='cd ../'
 alias ld='ls -ld'          # Show info about the directory
 alias lla='ls -lAF'        # Show hidden all files
 alias ll='ls -lF'          # Show long file information
