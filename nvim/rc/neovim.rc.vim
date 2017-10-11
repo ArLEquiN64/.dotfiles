@@ -6,8 +6,8 @@ if has('vim_starting') && empty(argv())
   syntax off
 endif
 
-let g:python_host_prog = system('echo -n $(which python2)')
-let g:python3_host_prog = system('(type pyenv &>/dev/null && echo -n "$(pyenv root)/versions/$(pyenv global)/bin/python") || echo -n $(which python3)')
+let g:python_host_prog = system('(type pyenv &>/dev/null && echo -n "$(pyenv root)/versions/$(pyenv global | sed -n -e 2p)/bin/python") || echo -n $(which python2)')
+let g:python3_host_prog = system('(type pyenv &>/dev/null && echo -n "$(pyenv root)/versions/$(pyenv global | sed -n -e 1p)/bin/python") || echo -n $(which python3)')
 
 
 if exists('&inccommand')
@@ -50,3 +50,4 @@ let g:terminal_scrollback_buffer_size = 3000
 
 " For denite.nvim in gonvim
 let g:gonvim_draw_split = 0
+

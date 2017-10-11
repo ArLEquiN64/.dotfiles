@@ -197,3 +197,4 @@ zstyle ':prezto:module:prompt' theme 'sorin'
 # export ZSH_HISTORY_KEYBIND_ARROW_DOWN="^n"
 # export ZSH_HISTORY_AUTO_SYNC=false
 # export ZSH_HISTORY_AUTO_SYNC_INTERVAL="1h"
+

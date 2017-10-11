@@ -157,3 +157,4 @@ setopt globdots
 setopt interactive_comments
 setopt list_types
 setopt magic_equal_subst
+
