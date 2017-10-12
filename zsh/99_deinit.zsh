@@ -10,3 +10,4 @@ printf "$fg_bold[cyan] - DISPLAY on $fg_bold[red]$DISPLAY$reset_color\n\n"
         source "$f"
     done
 }
+

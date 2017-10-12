@@ -113,3 +113,4 @@ setlocal iskeyword+=-
 '''
 
 ruby = 'setlocal omnifunc='
+

@@ -178,3 +178,4 @@ awk_alias() {
 alias -g A="| awk_alias"
 
 eval "$(hub alias -s)"
+
