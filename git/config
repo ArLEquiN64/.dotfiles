@@ -1,9 +1,10 @@
 [user]
-    email = ARLEQUIN.prx@gmail.com
-    name = ArLE
+  email = ARLEQUIN.prx@gmail.com
+  name = ArLE
 
 [alias]
-	tree = log --graph --pretty='format:%C(auto)%h %s %Cblue%an%C(auto)%d'
+  tree = log --graph --pretty='format:%C(auto)%h %s %Cblue%an%C(auto)%d'
 
 [push]
-	default = simple
+  default = simple
+
