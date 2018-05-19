@@ -6,9 +6,11 @@ if has('vim_starting') && empty(argv())
   syntax off
 endif
 
-let g:python_host_prog = system('(type pyenv &>/dev/null && echo -n "$(pyenv root)/versions/$(pyenv global | sed -n -e 2p)/bin/python") || echo -n $(which python2)')
-let g:python3_host_prog = system('(type pyenv &>/dev/null && echo -n "$(pyenv root)/versions/$(pyenv global | sed -n -e 1p)/bin/python") || echo -n $(which python3)')
+" let g:python_host_prog = system('(type pyenv &>/dev/null && echo -n "$(pyenv root)/versions/$(pyenv global | sed -n -e 2p)/bin/python") || echo -n $(which python2)')
+" let g:python3_host_prog = system('(type pyenv &>/dev/null && echo -n "$(pyenv root)/versions/$(pyenv global | sed -n -e 1p)/bin/python") || echo -n $(which python3)')
 
+let g:python_host_prog = system('(type asdf &>/dev/null && echo -n "$DOTPATH/asdf/installs/python/$(asdf current python | cut -d " " -f 1)/bin/python") || echo -n $(which python2)')
+let g:python3_host_prog = system('(type asdf &>/dev/null && echo -n "$DOTPATH/asdf/installs/python/2.7.15/bin/python") || echo -n $(which python3)')
 
 if exists('&inccommand')
   set inccommand=nosplit

@@ -36,7 +36,7 @@ depends = ['neosnippet-snippets', 'context_filetype.vim']
 on_event = 'InsertCharPre'
 on_ft = 'snippet'
 hook_source = '''
-  imap <silent>L     <Plug>(neosnippet_jump_or_expand)
+  " imap <silent>L     <Plug>(neosnippet_jump_or_expand)
   smap <silent>L     <Plug>(neosnippet_jump_or_expand)
   xmap <silent>L     <Plug>(neosnippet_expand_target)
   let g:neosnippet#enable_snipmate_compatibility = 1
