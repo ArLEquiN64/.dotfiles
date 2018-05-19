@@ -179,3 +179,5 @@ alias -g A="| awk_alias"
 
 eval "$(hub alias -s)"
 
+# alias -g g="cd $(ghq root)/$(ghq list | fzf)"
+
