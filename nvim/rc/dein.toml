@@ -63,6 +63,13 @@ repo = 'hynek/vim-python-pep8-indent'
 [[plugins]]
 repo = 'kana/vim-operator-user'
 
+
+[[plugins]]
+repo = 'godlygeek/tabular'
+
+[[plugins]]
+repo = 'joker1007/vim-markdown-quote-syntax'
+
 [[plugins]]
 repo = 'rcmdnk/vim-markdown'
 

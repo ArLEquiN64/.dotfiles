@@ -13,6 +13,7 @@ endif
 call dein#begin(s:path, expand('<sfile>'))
 
 call dein#load_toml('$XDG_CONFIG_HOME/nvim/rc/dein.toml', {'lazy': 0})
+call dein#local('/usr/local/Cellar/global/6.6.1/share/gtags', {})
 call dein#load_toml('$XDG_CONFIG_HOME/nvim/rc/deinlazy.toml', {'lazy' : 1})
 if has('nvim')
   call dein#load_toml('$XDG_CONFIG_HOME/nvim/rc/deineo.toml', {})
