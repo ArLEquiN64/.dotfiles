@@ -1,3 +1,8 @@
+#
+# Other customs.
+#
+
+
 export ANYENV_ROOT="$DOTPATH/anyenv"
 # if [ -d $ANYENV_ROOT ] ; then
 #   export PATH="$ANYENV_ROOT/bin:$PATH"
@@ -15,4 +20,3 @@ export ANYENV_ROOT="$DOTPATH/anyenv"
 
 . $DOTPATH/asdf/asdf.sh
 . $DOTPATH/asdf/completions/asdf.bash
-

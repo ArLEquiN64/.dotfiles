@@ -170,6 +170,8 @@ __pycache__/
 # ============
 # Other
 # ============
+# ---- asdf ----
+.tool-versionk
+
 # ---- pyenv ----
 .python-version
-

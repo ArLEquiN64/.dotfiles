@@ -52,4 +52,3 @@ let g:terminal_scrollback_buffer_size = 3000
 
 " For denite.nvim in gonvim
 let g:gonvim_draw_split = 0
-

@@ -91,5 +91,3 @@ hi link rubyConditional       Keyword
 hi link rubyInterpolation     Interpolation
 hi link rubyInterpolationDelimiter    Interpolation
 hi link rubyRailsMethod       Method
-
-

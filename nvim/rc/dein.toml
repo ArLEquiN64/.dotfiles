@@ -155,4 +155,3 @@ hook_add = '''
 
 [[plugins]]
 repo = 'airblade/vim-gitgutter'
-

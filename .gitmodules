@@ -4,9 +4,6 @@
 [submodule "nvim/dein/repos/github.com/Shougo/dein.vim"]
 	path = nvim/dein/repos/github.com/Shougo/dein.vim
 	url = git://github.com/Shougo/dein.vim.git
-[submodule "anyenv"]
-	path = anyenv
-	url = git://github.com/riywo/anyenv.git
 [submodule "asdf"]
 	path = asdf
 	url = git://github.com/asdf-vm/asdf.git

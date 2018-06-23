@@ -1,3 +1,8 @@
+#
+# setopts.
+#
+
+
 # Do not print the directory stack after pushd or popd.
 #setopt pushd_silent
 # Replace 'cd -' with 'cd +'
@@ -157,4 +162,3 @@ setopt globdots
 setopt interactive_comments
 setopt list_types
 setopt magic_equal_subst
-

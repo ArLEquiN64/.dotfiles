@@ -167,4 +167,3 @@ nnoremap cN *``cgN
 " Change selected word and repeatable
 vnoremap <expr> cn "y/\\V\<C-r>=escape(@\", '/')\<CR>\<CR>" . "``cgn"
 vnoremap <expr> cN "y/\\V\<C-r>=escape(@\", '/')\<CR>\<CR>" . "``cgN"
-

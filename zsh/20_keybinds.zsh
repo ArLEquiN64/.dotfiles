@@ -1,3 +1,8 @@
+#
+# Defines keybinds.
+#
+
+
 # Vim-like keybind as default
 bindkey -v
 # Vim-like escaping jj keybind
@@ -260,4 +265,3 @@ globalias() {
 zle -N globalias
 
 bindkey " " globalias
-

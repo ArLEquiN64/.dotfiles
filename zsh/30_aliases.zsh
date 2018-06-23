@@ -1,3 +1,8 @@
+#
+# Defines aliases.
+#
+
+
 alias p="print -l"
 
 # For mac, aliases
@@ -180,4 +185,3 @@ alias -g A="| awk_alias"
 eval "$(hub alias -s)"
 
 # alias -g g="cd $(ghq root)/$(ghq list | fzf)"
-
