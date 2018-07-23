@@ -515,3 +515,22 @@ hook_source = '''
   \ .'stable-x86_64-unknown-linux-gnu/'
   \ .'lib/rustlib/src/rust/src/')
 '''
+
+[[plugins]]
+repo = 'autozimu/LanguageClient-neovim'
+depends = 'deoplete.nvim'
+on_ft = ['rust', 'vue']
+build = './install.sh'
+hook_source = '''
+set hidden
+let g:LanguageClient_serverCommands = {
+  \   'vue': ['vls'],
+  \   'rust': ['rustup', 'run', 'nightly', 'rls'],
+  \ }
+let g:LanguageClient_autoStart = 1
+set signcolumn=yes
+setlocal iskeyword+=-
+nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
+nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
+nnoremap <silent> <F2> :call LanguageClient_textDocument_rename()<CR>
+'''
